@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export default function Synergy({ countAS, synergy, wizards }) {
+export default function Synergy({ countAS, synergy, wizards}) {
 
 
   let race = {...synergy}

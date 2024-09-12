@@ -10,7 +10,6 @@ export default function Board({boardHeroes, deleteHero}) {
                 className='hero-item-board'
                 >{hero.name} ({hero.races.join(' ')})</div>
             )
-            
         })}
     </div>
   )

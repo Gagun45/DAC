@@ -31,18 +31,17 @@ function App() {
   useEffect(()=>{
     let w = finalActiveSynergies.find(r=>r.name=='Wizard')
     if (w) setWizards(w.active)
+    let d = finalActiveSynergies.find(r=>r.name=='Demon')
+    let dh = finalActiveSynergies.find(r=>r.name=='Demon Hunter')
+    if (d&&d.active>1) {
+      if (dh&&dh.active>=2){
+        d.active=1
+      } else d.active=0
+      
+    }
     setCountAS(finalActiveSynergies.filter(r=>(r.name!='Wizard'&&r.active>=r.stages[0])).length)
   }, [finalActiveSynergies])
 
-
-  // function twoWizards(arr) {
-  //   let newArr = arr.map(r=>{
-  //     if (r.name=='Druid') return {...r}
-  //     else if (r.stages[2]) {return {...r, stages: [r.stages[0], r.stages[1]-1, r.stages[2]-1]}}
-  //     else if (r.stages[1]&&r.stages[1]>2) {return {...r, stages: [r.stages[0], r.stages[1]-1]}}
-  //   })
-  //   return newArr
-  // }
 
   function pickHero(hero) {
     if (boardHeroes.includes(hero)) {
