@@ -1,6 +1,6 @@
 const ones = [
     {
-        name: "Miranawwwwww",
+        name: "Mirana",
         cost: 'one',
         races: ['Elf', 'Hunter']
     },
