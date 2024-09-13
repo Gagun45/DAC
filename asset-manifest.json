@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/DAC/static/css/main.380e867e.css",
-    "main.js": "/DAC/static/js/main.3ec5eaf9.js",
+    "main.css": "/DAC/static/css/main.d78453eb.css",
+    "main.js": "/DAC/static/js/main.52c2ef42.js",
     "index.html": "/DAC/index.html",
-    "main.380e867e.css.map": "/DAC/static/css/main.380e867e.css.map",
-    "main.3ec5eaf9.js.map": "/DAC/static/js/main.3ec5eaf9.js.map"
+    "main.d78453eb.css.map": "/DAC/static/css/main.d78453eb.css.map",
+    "main.52c2ef42.js.map": "/DAC/static/js/main.52c2ef42.js.map"
   },
   "entrypoints": [
-    "static/css/main.380e867e.css",
-    "static/js/main.3ec5eaf9.js"
+    "static/css/main.d78453eb.css",
+    "static/js/main.52c2ef42.js"
   ]
 }
