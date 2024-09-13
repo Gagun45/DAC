@@ -7,7 +7,7 @@ export default function Card({ hero, pushRace }) {
 
     let new_species = SPECIES.filter(s=>!excluded.includes(s.name))
 
-    const [cardRace, setCardRace] = useState(SPECIES[0].name)
+    const [cardRace, setCardRace] = useState(new_species[0].name)
 
     return (
         <div onClick={e => {
@@ -17,7 +17,7 @@ export default function Card({ hero, pushRace }) {
                 e => setCardRace(e.target.value)
             }
             >
-                {SPECIES.map((race, index) => (<option key={index} >{race.name}</option>))}
+                {new_species.map((race, index) => (<option key={index} >{race.name}</option>))}
             </select>
             <span onClick={e => {
                 e.stopPropagation()

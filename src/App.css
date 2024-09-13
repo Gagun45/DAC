@@ -47,10 +47,17 @@
   justify-content: space-between;
 }
 
+.hero-item-board {
+  display: flex;
+  justify-content: space-between;
+}
+
 .picked {
   background-color: rgb(0, 172, 0);
 }
-.hero-item-picker:hover{
+.hero-item-picker:hover,
+.hero-item-picker:focus-visible
+{
   background-color: rgba(0, 255,255,0.9);
 }
 

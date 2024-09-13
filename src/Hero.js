@@ -1,7 +1,13 @@
 import React from 'react'
 
 export default function Hero({ hero, pickHero, boardHeroes }) {
-  const classTag = boardHeroes.includes(hero) ? "hero-item-picker picked" : "hero-item-picker"
+
+    let id = hero.id
+    let includesBoard = false
+    boardHeroes.map(h => {
+      if (h.id == id) includesBoard = true
+    })
+  const classTag = includesBoard ? "hero-item-picker picked" : "hero-item-picker"
   return (
     <div className={classTag} onClick={() => pickHero(hero)}>
       <span>{hero.name}</span>

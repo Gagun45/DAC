@@ -1,5 +1,3 @@
-import React, { act, useEffect, useState } from 'react'
-
 export default function Synergy({ countAS, synergy, wizards, demonHunters, demons}) {
 
 

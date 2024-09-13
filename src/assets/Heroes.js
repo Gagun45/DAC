@@ -561,4 +561,8 @@ const fives = [
         races: ['Elf']
     },
 ]
-export const HEROES = [...ones, ...twos, ...threes, ...fours, ...fives]
+
+let prevHeroes = [...ones, ...twos, ...threes, ...fours, ...fives]
+prevHeroes.map((hero, index) =>({...hero,id: index}))
+
+export const HEROES = prevHeroes.map((hero, index) =>({...hero,id: index}))
