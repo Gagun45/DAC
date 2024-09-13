@@ -55,10 +55,17 @@ function App() {
     setBoardHeroes(newHeroes)
   }
 
+  function pushRace(hero, race) {
+    setBoardHeroes(boardHeroes.map(h=>{
+      if (h==hero&&!h.races.includes(race)) {return {...hero, races: [...h.races, race]}}
+      else return h
+    }))
+  }
+
   return (
     <div className='container'>
       <HeroPicker heroes={HEROES} pickHero={pickHero} boardHeroes={boardHeroes}/>
-      <Board boardHeroes={boardHeroes} deleteHero={deleteHero} />
+      <Board boardHeroes={boardHeroes} deleteHero={deleteHero} pushRace={pushRace} />
       <Synergies activeSynergies={finalActiveSynergies} demonHunters={demonHunters} demons={demons} wizards={wizards} countAS={countAS}/>
     </div>
   );
