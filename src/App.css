@@ -4,36 +4,95 @@
   padding: 0;
   user-select: none;
 }
+.header {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: #777;
-  display: grid;
-  grid-template-columns: 1fr minmax(300px, auto);
-  grid-template-rows: 1fr minmax(300px, auto);
-  grid-template-areas: 
-  "picker picker"
-  "board synergies";
+  display: flex;
+  flex-direction: column;
+  /* background: url(./assets/dacbg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
 }
 .hero-picker{
-  grid-area: picker;
-  background-color: green;
+  color: white;
   display: flex;
 }
 
 .board {
-  grid-area: board;
-  background-color: purple;
+  background-color: rgba(255,255,255, 0.4);
+  height: auto;
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  .board-grid {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 1em;
+    .hero-item-board {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 1em;
+      padding: 1em 0;
+      .name {
+        text-align: center;
+        font-size: 2rem;
+      }
+      .races {
+        text-align: center;
+      }
+    }
+  }
+  .board-btns {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }
 .synergies {
-  grid-area: synergies;
-  background-color: white;
+  background-color: rgba(197, 41, 41, 0.4);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.synergy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .stages {
+    display: flex;
+    gap:0.1em;
+  }
+  
 }
 .active {
   font-weight: bold;
 }
 .flex-column {
   flex: 1;
+}
+
+.card {
+  display: block;
+}
+.hide {
+  display: none;
 }
 
 .hero-item-picker, 
@@ -49,7 +108,7 @@
 
 .hero-item-board {
   display: flex;
-  justify-content: space-between;
+  gap: 1em;
 }
 
 .picked {
@@ -66,7 +125,7 @@
   border: 1px solid black;
   font-size: 2em;
 }
-.ones {
+/* .ones {
   background-color: rgb(204, 252, 252);
 }
 .twos {
@@ -80,4 +139,4 @@
 }
 .fives {
   background-color: rgb(199, 221, 0);
-}
+} */

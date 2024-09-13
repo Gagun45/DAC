@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { SPECIES } from './assets/Races'
 
-export default function Card({ hero, pushRace }) {
+export default function Card({isCardVisible, hero, pushRace }) {
 
     const excluded = ['Human', 'Mech', 'Pandaren', 'Druid']
 
@@ -10,7 +10,8 @@ export default function Card({ hero, pushRace }) {
     const [cardRace, setCardRace] = useState(new_species[0].name)
 
     return (
-        <div onClick={e => {
+        <div className={isCardVisible ? 'card' : 'hide'}
+        onClick={e => {
             e.stopPropagation()
         }} >
             <select value={cardRace} onChange={

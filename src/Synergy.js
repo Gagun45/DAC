@@ -27,14 +27,16 @@ export default function Synergy({ countAS, synergy, wizards, demonHunters, demon
   }
 
   return (
-    <div>
-      <span className={race.active >= race.stages[0] ? 'active' : null}>{race.name} : {race.active}</span> (
+    <div className="synergy">
+      <div className={race.active >= race.stages[0] ? 'active' : null}>{race.name}: {race.active}</div>
+      <div className="stages">[
       {race.stages.map((stage, index) => {
         return (
-          <span key={index} className={stage <= race.active ? 'active' : null}>{stage} </span>
+          <span key={index} className={stage <= race.active ? 'active' : null}>{stage}</span>
         )
       })}
-      )
+      ]
+      </div>
     </div>
   )
 }

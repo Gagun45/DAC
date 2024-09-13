@@ -5,6 +5,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { HEROES } from './assets/Heroes';
 import { SPECIES } from './assets/Races';
+import NavBar from './NavBar';
 
 
 
@@ -16,9 +17,11 @@ function App() {
   const [countAS, setCountAS] = useState(0)
   const [demons, setDemons] = useState(0)
   const [demonHunters, setDemonHunters] = useState(0)
+  const [isCardVisible, setIsCardVisible] = useState(false)
   let allRaces, newSynergies
 
   useEffect(() => {
+    if (boardHeroes.length==0) setIsCardVisible(false)
     let DEFAULT_SYNERGIES = JSON.parse(JSON.stringify(SPECIES))
     allRaces = []
     allRaces = boardHeroes.map(hero => hero.races).flat()
@@ -30,6 +33,7 @@ function App() {
     })
     setFinalActiveSynergies(newSynergies)
   }, [boardHeroes])
+
   useEffect(() => {
     let w = finalActiveSynergies.find(r => r.name == 'Wizard')
     if (w) setWizards(w.active)
@@ -41,6 +45,9 @@ function App() {
     setCountAS(finalActiveSynergies.filter(r => (r.name != 'Wizard' && r.active >= r.stages[0])).length)
   }, [finalActiveSynergies])
 
+  function toggleCard() {
+    setIsCardVisible(prev=>!prev)
+  }
 
   function pickHero(hero) {
 
@@ -56,12 +63,7 @@ function App() {
     } else setBoardHeroes(prevHeroes => ([...prevHeroes, hero]))
   }
 
-  //   if (boardHeroes.includes(hero)) {
-  //     const newHeroes = boardHeroes.filter(item => item !== hero)
-  //     setBoardHeroes(newHeroes)
-  //   }
-  //   else setBoardHeroes(prevHeroes => ([...prevHeroes, hero]))
-  // }
+
 
 
   function deleteHero(hero) {
@@ -76,11 +78,16 @@ function App() {
     }))
   }
 
+  function clearBoard() {
+    setBoardHeroes([])
+  }
+
   return (
     <div className='container'>
+      <NavBar />
       <HeroPicker heroes={HEROES} pickHero={pickHero} boardHeroes={boardHeroes} />
-      <Board boardHeroes={boardHeroes} deleteHero={deleteHero} pushRace={pushRace} />
       <Synergies activeSynergies={finalActiveSynergies} demonHunters={demonHunters} demons={demons} wizards={wizards} countAS={countAS} />
+      <Board clearBoard={clearBoard} toggleCard={toggleCard} isCardVisible={isCardVisible} boardHeroes={boardHeroes} deleteHero={deleteHero} pushRace={pushRace} />
     </div>
   );
 }
