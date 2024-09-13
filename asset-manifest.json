@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DAC/static/css/main.380e867e.css",
+    "main.js": "/DAC/static/js/main.3ec5eaf9.js",
+    "index.html": "/DAC/index.html",
+    "main.380e867e.css.map": "/DAC/static/css/main.380e867e.css.map",
+    "main.3ec5eaf9.js.map": "/DAC/static/js/main.3ec5eaf9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.380e867e.css",
+    "static/js/main.3ec5eaf9.js"
+  ]
+}
