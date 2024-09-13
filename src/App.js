@@ -14,6 +14,8 @@ function App() {
   const [finalActiveSynergies, setFinalActiveSynergies] = useState([])
   const [wizards, setWizards] = useState(0)
   const [countAS, setCountAS] = useState(0)
+  const [demons, setDemons] = useState(0)
+  const [demonHunters, setDemonHunters] = useState(0)
   let allRaces, newSynergies
 
   useEffect(() => {
@@ -32,13 +34,10 @@ function App() {
     let w = finalActiveSynergies.find(r=>r.name=='Wizard')
     if (w) setWizards(w.active)
     let d = finalActiveSynergies.find(r=>r.name=='Demon')
+    if (d) setDemons(d.active)
     let dh = finalActiveSynergies.find(r=>r.name=='Demon Hunter')
-    if (d&&d.active>1) {
-      if (dh&&dh.active>=2){
-        d.active=1
-      } else d.active=0
-      
-    }
+    if (dh) setDemonHunters(dh.active)
+    
     setCountAS(finalActiveSynergies.filter(r=>(r.name!='Wizard'&&r.active>=r.stages[0])).length)
   }, [finalActiveSynergies])
 
@@ -60,7 +59,7 @@ function App() {
     <div className='container'>
       <HeroPicker heroes={HEROES} pickHero={pickHero} boardHeroes={boardHeroes}/>
       <Board boardHeroes={boardHeroes} deleteHero={deleteHero} />
-      <Synergies activeSynergies={finalActiveSynergies} wizards={wizards} countAS={countAS}/>
+      <Synergies activeSynergies={finalActiveSynergies} demonHunters={demonHunters} demons={demons} wizards={wizards} countAS={countAS}/>
     </div>
   );
 }

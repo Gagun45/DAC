@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { act, useEffect, useState } from 'react'
 
-export default function Synergy({ countAS, synergy, wizards}) {
+export default function Synergy({ countAS, synergy, wizards, demonHunters, demons}) {
 
 
   let race = {...synergy}
+
+  if (demons>1 && demonHunters<2) {
+    countAS-=1
+    if (race.name=='Demon') race={...race, active: 0}
+  }
+  
 
   if (wizards>=2) wizarded(race)
     
