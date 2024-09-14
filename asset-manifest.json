@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/DAC/static/css/main.1782ffa4.css",
+    "main.css": "/DAC/static/css/main.9eafc554.css",
     "main.js": "/DAC/static/js/main.7f151607.js",
     "index.html": "/DAC/index.html",
-    "main.1782ffa4.css.map": "/DAC/static/css/main.1782ffa4.css.map",
+    "main.9eafc554.css.map": "/DAC/static/css/main.9eafc554.css.map",
     "main.7f151607.js.map": "/DAC/static/js/main.7f151607.js.map"
   },
   "entrypoints": [
-    "static/css/main.1782ffa4.css",
+    "static/css/main.9eafc554.css",
     "static/js/main.7f151607.js"
   ]
 }
