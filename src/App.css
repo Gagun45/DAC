@@ -11,7 +11,7 @@
   align-items: center;
 }
 .container {
-  width: 100vw;
+  min-width: 900px;
   min-height: 100vh;
   background-color: #777;
   display: flex;
@@ -27,18 +27,19 @@
 }
 
 .board {
+  width: 100%;
+  border: 5px solid green;
   background-color: rgba(255,255,255, 0.4);
   height: auto;
   flex-grow: 1;
-  position: relative;
   display: flex;
   align-items: flex-start;
-  gap: 10rem;
   padding-top: 2em;
+  gap: 2rem;
   .board-grid {
     margin-left: auto;
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     .hero-item-board {
       display: flex;
@@ -59,9 +60,9 @@
   }
 }
 .board-btns {
+  border: 5px solid purple;
   display: flex;
   font-size: 1.5rem;
-  gap: 2rem;
   button {
     padding: 0.5em 1em;
     border-radius: 0.5em;
@@ -77,6 +78,7 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
+  flex-wrap: wrap;
 }
 .synergy {
   display: flex;
