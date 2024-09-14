@@ -1,5 +1,6 @@
-export default function Synergy({ countAS, synergy, wizards, demonHunters, demons}) {
+import Bricks from "./Bricks"
 
+export default function Synergy({ countAS, synergy, wizards, demonHunters, demons}) {
 
   let race = {...synergy}
 
@@ -32,11 +33,12 @@ export default function Synergy({ countAS, synergy, wizards, demonHunters, demon
       <div className="stages">[
       {race.stages.map((stage, index) => {
         return (
-          <span key={index} className={stage <= race.active ? 'active' : null}>{stage}</span>
+          <span key={index} className={stage <= race.active ? 'activeStage' : null}>{stage}</span>
         )
       })}
       ]
       </div>
+      <Bricks stages={race.stages} />
     </div>
   )
 }

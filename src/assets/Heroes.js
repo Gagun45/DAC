@@ -563,6 +563,16 @@ const fives = [
 ]
 
 let prevHeroes = [...ones, ...twos, ...threes, ...fours, ...fives]
-prevHeroes.map((hero, index) =>({...hero,id: index}))
+
+let newPrevHeroes = [...prevHeroes]
+prevHeroes = newPrevHeroes.map(hero=>{
+    switch(hero.cost){
+        case 'one': return {...hero, costNumber: 1}
+        case 'two': return {...hero, costNumber: 2}
+        case 'three': return {...hero, costNumber: 3}
+        case 'four': return {...hero, costNumber: 4}
+        case 'five': return {...hero, costNumber: 5}
+    }
+})
 
 export const HEROES = prevHeroes.map((hero, index) =>({...hero,id: index}))

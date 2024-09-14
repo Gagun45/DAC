@@ -7,6 +7,8 @@ import { HEROES } from './assets/Heroes';
 import { SPECIES } from './assets/Races';
 import NavBar from './NavBar';
 
+export const MAX_BOARD_CAPACITY = 12
+
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
       })
     })
     setFinalActiveSynergies(newSynergies)
+    setBoardHeroes(boardHeroes.sort((a,b)=>b.costNumber - a.costNumber))
   }, [boardHeroes])
 
   useEffect(() => {
@@ -60,7 +63,9 @@ function App() {
     if (includesBoard) {
       const newHeroes = boardHeroes.filter(item => item.id !== hero.id)
       setBoardHeroes(newHeroes)
-    } else setBoardHeroes(prevHeroes => ([...prevHeroes, hero]))
+    } else {
+      if (boardHeroes.length<MAX_BOARD_CAPACITY) setBoardHeroes(prevHeroes => ([...prevHeroes, hero]))
+    }
   }
 
 
