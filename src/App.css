@@ -35,7 +35,7 @@
   display: flex;
   align-items: flex-start;
   padding-top: 2em;
-  gap: 2rem;
+  gap: 20%;
   .board-grid {
     margin-left: auto;
     display: grid;
