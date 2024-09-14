@@ -57,16 +57,16 @@
       }
     }
   }
-  .board-btns {
-    display: flex;
-    font-size: 1.5rem;
-    gap: 1rem;
-    button {
-      padding: 0.5em 1em;
-      border-radius: 0.5em;
-      outline: none;
-      cursor: pointer;
-    }
+}
+.board-btns {
+  display: flex;
+  font-size: 1.5rem;
+  gap: 2rem;
+  button {
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    outline: none;
+    cursor: pointer;
   }
 }
 .synergies {
