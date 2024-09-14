@@ -14,7 +14,7 @@ export default function Card({isCardVisible, hero, pushRace }) {
         onClick={e => {
             e.stopPropagation()
         }} >
-            <select value={cardRace} onChange={
+            <select  value={cardRace} onChange={
                 e => setCardRace(e.target.value)
             }
             >

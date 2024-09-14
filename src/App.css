@@ -87,6 +87,9 @@
 .flex-column {
   flex: 1;
 }
+.synergy:has(.active) {
+  font-size: x-large;
+}
 
 .card {
   display: block;
