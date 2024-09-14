@@ -60,7 +60,6 @@
     /* margin-left: auto; */
     display: flex;
     font-size: 1.5rem;
-    gap: 20px;
     button {
       padding: 0.5em 1em;
       border-radius: 0.5em;
@@ -70,7 +69,7 @@
   }
 }
 .synergies {
-  background-color: rgba(197, 41, 41, 0.4);
+  background-color: rgba(122, 228, 255, 0.4);
   width: 100%;
   height: auto;
   display: flex;
@@ -84,7 +83,6 @@
   align-items: center;
   .stages {
     display: flex;
-    align-items: center;
     gap:0.1em;
   }
   
