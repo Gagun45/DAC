@@ -33,6 +33,7 @@
   position: relative;
   display: flex;
   align-items: flex-start;
+  gap: 10rem;
   padding-top: 2em;
   .board-grid {
     margin-left: auto;
@@ -57,7 +58,6 @@
     }
   }
   .board-btns {
-    margin-left: auto;
     display: flex;
     font-size: 1.5rem;
     gap: 1rem;
@@ -82,12 +82,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .stages {
-    display: flex;
-    align-items: center;
-    gap:0.1em;
-  }
-  
+}
+.stages {
+  display: flex;
+  align-items: center;
+  gap:0.1em;
 }
 .active {
   font-weight: bold;
