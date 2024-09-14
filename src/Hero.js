@@ -7,7 +7,7 @@ export default function Hero({ hero, pickHero, boardHeroes }) {
     boardHeroes.map(h => {
       if (h.id == id) includesBoard = true
     })
-  const classTag = includesBoard ? "hero-item-picker picked" : "hero-item-picker"
+  const classTag = `hero-item-picker ${includesBoard && 'picked'} ${hero.pool==false&&'outOfPool'}`
   return (
     <div className={classTag} onClick={() => pickHero(hero)}>
       <span>{hero.name}</span>

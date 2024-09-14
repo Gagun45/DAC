@@ -44,7 +44,6 @@ function App() {
     if (d) setDemons(d.active)
     let dh = finalActiveSynergies.find(r => r.name == 'Demon Hunter')
     if (dh) setDemonHunters(dh.active)
-
     setCountAS(finalActiveSynergies.filter(r => (r.name != 'Wizard' && r.active >= r.stages[0])).length)
   }, [finalActiveSynergies])
 

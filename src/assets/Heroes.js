@@ -102,12 +102,14 @@ const ones = [
     {
         name: "Winter Wyvern",
         cost: 'one',
-        races: ['Undead', 'Dragon', 'Mage']
+        races: ['Undead', 'Dragon', 'Mage'],
+        pool: false
     },
     {
         name: "Vengeful Spirit",
         cost: 'one',
-        races: ['Undead', 'Harpy', 'Demon Hunter']
+        races: ['Undead', 'Harpy', 'Demon Hunter'],
+        pool: false
     },
 ]
 
@@ -215,17 +217,20 @@ const twos = [
     {
         name: "Pudge",
         cost: 'two',
-        races: ['Undead', 'Warrior']
+        races: ['Undead', 'Warrior'],
+        pool: false
     },
     {
         name: "Clinkz",
         cost: 'two',
-        races: ['Undead', 'Hunter']
+        races: ['Undead', 'Hunter'],
+        pool: false
     },
     {
         name: "Abaddon",
         cost: 'two',
-        races: ['Undead', 'Knight']
+        races: ['Undead', 'Knight'],
+        pool: false
     },
 ]
 
@@ -323,17 +328,20 @@ const threes = [
     {
         name: "Drow Ranger",
         cost: 'three',
-        races: ['Undead', 'Hunter']
+        races: ['Undead', 'Hunter'],
+        pool: false
     },
     {
         name: "Muerta",
         cost: 'three',
-        races: ['Undead', 'Hunter']
+        races: ['Undead', 'Hunter'],
+        pool: false
     },
     {
         name: "Undying",
         cost: 'three',
-        races: ['Undead', 'Priest']
+        races: ['Undead', 'Priest'],
+        pool: false
     },
 ]
 
@@ -421,37 +429,44 @@ const fours = [
     {
         name: "Wraith King",
         cost: 'four',
-        races: ['Undead', 'Warrior']
+        races: ['Undead', 'Warrior'],
+        pool: false
     },
     {
         name: "Death Prophet",
         cost: 'four',
-        races: ['Undead', 'Warlock']
+        races: ['Undead', 'Warlock'],
+        pool: false
     },
     {
         name: "Nyx Assassin",
         cost: 'four',
-        races: ['Aqir', 'Undead', 'Assassin']
+        races: ['Aqir', 'Undead', 'Assassin'],
+        pool: false
     },
     {
         name: "Ember Spirit",
         cost: 'four',
-        races: ['Pandaren', 'Assassin']
+        races: ['Pandaren', 'Assassin'],
+        pool: false
     },
     {
         name: "Storm Spirit",
         cost: 'four',
-        races: ['Pandaren', 'Mage']
+        races: ['Pandaren', 'Mage'],
+        pool: false
     },
     {
         name: "Earth Spirit",
         cost: 'four',
-        races: ['Pandaren', 'Shaman']
+        races: ['Pandaren', 'Shaman'],
+        pool: false
     },
     {
         name: "Void Spirit",
         cost: 'four',
-        races: ['Pandaren', 'Monk']
+        races: ['Pandaren', 'Monk'],
+        pool: false
     },
 ]
 const fives = [
@@ -543,22 +558,26 @@ const fives = [
     {
         name: "Lich",
         cost: 'five',
-        races: ['Undead', 'Mage']
+        races: ['Undead', 'Mage'],
+        pool: false
     },
     {
         name: "Necrophos",
         cost: 'five',
-        races: ['Undead', 'Warlock']
+        races: ['Undead', 'Warlock'],
+        pool: false
     },
     {
         name: "Spectre",
         cost: 'five',
-        races: ['Undead', 'Demon Hunter']
+        races: ['Undead', 'Demon Hunter'],
+        pool: false
     },
     {
         name: "Io",
         cost: 'five',
-        races: ['Elf']
+        races: ['Elf'],
+        pool: false
     },
 ]
 

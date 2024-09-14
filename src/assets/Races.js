@@ -183,4 +183,5 @@ const CLASSES = [
         active: 0
     },
 ]
-export const SPECIES = [...RACES, ...CLASSES]
+
+export const SPECIES = [...RACES, ...CLASSES].sort((a, b)=>a.name.localeCompare(b.name))
