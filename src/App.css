@@ -57,12 +57,11 @@
     }
   }
   .board-btns {
-    margin-left: auto;
+    /* margin-left: auto; */
     display: flex;
     font-size: 1.5rem;
-    gap: 1em;
+    gap: 20px;
     button {
-      color: red;
       padding: 0.5em 1em;
       border-radius: 0.5em;
       outline: none;
@@ -86,7 +85,6 @@
   .stages {
     display: flex;
     align-items: center;
-    color: brown;
     gap:0.1em;
   }
   
