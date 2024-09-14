@@ -33,9 +33,9 @@
   position: relative;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  padding-top: 2em;
   .board-grid {
-    margin-top: 2em;
+    margin-left: auto;
     display: grid;
     grid-template-columns: repeat(3, 200px);
     gap: 1em;
@@ -57,12 +57,10 @@
     }
   }
   .board-btns {
-    position: absolute;
+    margin-left: auto;
     display: flex;
     font-size: 1.5rem;
     gap: 1em;
-    top: 2em;
-    right: 0;
     button {
       padding: 0.5em 1em;
       border-radius: 0.5em;
