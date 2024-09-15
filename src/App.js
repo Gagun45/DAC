@@ -3,11 +3,12 @@ import Board from './Board';
 import Synergies from './Synergies';
 import './App.css';
 import { useState, useEffect } from 'react';
-import { HEROES } from './assets/Heroes';
+import { HEROES } from './assets/heroes/Heroes';
 import { SPECIES } from './assets/Races';
 import NavBar from './NavBar';
 
 export const MAX_BOARD_CAPACITY = 12
+
 
 
 
@@ -20,6 +21,7 @@ function App() {
   const [demons, setDemons] = useState(0)
   const [demonHunters, setDemonHunters] = useState(0)
   const [isCardVisible, setIsCardVisible] = useState(false)
+  const [highlightedSpecies, setHighlightedSpecies] = useState([...SPECIES])
   let allRaces, newSynergies
 
   useEffect(() => {
@@ -48,6 +50,7 @@ function App() {
   }, [finalActiveSynergies])
 
   function toggleCard() {
+    if (boardHeroes.length==0) return
     setIsCardVisible(prev=>!prev)
   }
 
@@ -67,8 +70,24 @@ function App() {
     }
   }
 
+  function highlightRace(race) {
+    
+    let allHighlighted = true 
+    highlightedSpecies.map(s=>{if (s.highlighted==false) allHighlighted=false})
 
-
+    if (allHighlighted){
+      setHighlightedSpecies(highlightedSpecies.map(r=>{
+        if (r.name==race.name) return {...r, highlighted: true }
+        return {...r, highlighted: false}
+        }))
+    }
+    if (!allHighlighted&&race.highlighted) {
+      setHighlightedSpecies(highlightedSpecies.map(r=>({...r, highlighted: true})))
+    } else setHighlightedSpecies(highlightedSpecies.map(r=>{
+      if (r.name==race.name) return {...r, highlighted: true}
+      return {...r, highlighted: false}
+    }))
+  }
 
   function deleteHero(hero) {
     const newHeroes = boardHeroes.filter(item => item !== hero)
@@ -89,7 +108,7 @@ function App() {
   return (
     <div className='container'>
       <NavBar />
-      <HeroPicker heroes={HEROES} pickHero={pickHero} boardHeroes={boardHeroes} />
+      <HeroPicker highlightedSpecies={highlightedSpecies} highlightRace={highlightRace} heroes={HEROES} pickHero={pickHero} boardHeroes={boardHeroes} />
       <Synergies activeSynergies={finalActiveSynergies} demonHunters={demonHunters} demons={demons} wizards={wizards} countAS={countAS} />
       <Board clearBoard={clearBoard} toggleCard={toggleCard} isCardVisible={isCardVisible} boardHeroes={boardHeroes} deleteHero={deleteHero} pushRace={pushRace} />
     </div>

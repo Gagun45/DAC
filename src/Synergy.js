@@ -1,5 +1,4 @@
 import BrickGrid from "./BrickGrid"
-import Brick from "./Brick"
 
 export default function Synergy({ countAS, synergy, wizards, demonHunters, demons}) {
 
@@ -30,8 +29,8 @@ export default function Synergy({ countAS, synergy, wizards, demonHunters, demon
 
   return (
     <div className="synergy">
-      <div className={race.active >= race.stages[0] ? 'active' : null}>{race.name}: {race.active}</div>
       <BrickGrid stages={race.stages} active={race.active}/>
+      <img className={race.active >= race.stages[0] ? 'activeRaceIcon' : 'passiveRaceIcon'} src={race.raceIcon} width={60} height={40}/>
     </div>
   )
 }

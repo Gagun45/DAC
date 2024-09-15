@@ -1,9 +1,11 @@
 import React from 'react'
 import Card from './Card'
 import { MAX_BOARD_CAPACITY } from './App'
+import { SPECIES } from './assets/Races'
+
 
 export default function Board({ clearBoard, isCardVisible, toggleCard, boardHeroes, deleteHero, pushRace }) {
-  
+
   return (
     <div className='board'>
       <div className='board-grid'>
@@ -11,20 +13,26 @@ export default function Board({ clearBoard, isCardVisible, toggleCard, boardHero
 
           return (
 
-            <div key={index}
-              onClick={() => deleteHero(hero)}
-              className={`hero-item-board ${hero.cost}`}
-            ><span className='name'>{hero.name}</span> <span className='races'>({hero.races.join(' ')})</span>
-              <Card isCardVisible={isCardVisible} pushRace={pushRace} hero={hero} />
-            </div>
+            <>
+              <div key={index}
+                className={`hero-item-board ${hero.cost}`}
+              >{hero.icon ? (<img className='hero-item-board-icon' onClick={() => deleteHero(hero)} src={hero.icon} />) : <span className='name'>{hero.name}</span>}
+                <div className='races'>
+                  {hero.races.map(r => {
+                    return (<img src={SPECIES.find(item => item.name == r).raceIcon} width={40} height={20} />)
+                  })}
+                </div>
+                <Card isCardVisible={isCardVisible} pushRace={pushRace} hero={hero} />
+              </div>
+            </>
           )
         })}
       </div>
-      <div className='board-btns'>
-          <span>{boardHeroes.length ? `[${boardHeroes.length} / ${MAX_BOARD_CAPACITY}]` : null}</span>
-          <button onClick={toggleCard}>{isCardVisible ? "Hide Card" : "Show Card"}</button>
-          <button onClick={clearBoard}>Clear Board</button>
-        </div>
+      <div className={`board-btns ${boardHeroes.length||'hide'}`}>
+        <span>{boardHeroes.length&&`[${boardHeroes.length} / ${MAX_BOARD_CAPACITY}]`}</span>
+        <button onClick={toggleCard}>{isCardVisible ? "Hide Card" : "Show Card"}</button>
+        <button onClick={clearBoard}>Clear Board</button>
+      </div>
     </div>
   )
 }

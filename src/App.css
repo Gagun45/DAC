@@ -56,11 +56,14 @@
   background-repeat: no-repeat; */
 }
 .hero-picker{
+  padding: 0 5em;
   color: white;
   display: flex;
+  font-size: 1.1rem;
 }
 
 .board {
+  padding: 2em;
   width: 100%;
   border: 5px solid green;
   background-color: rgba(255,255,255, 0.4);
@@ -68,30 +71,42 @@
   flex-grow: 1;
   display: flex;
   align-items: flex-start;
-  padding-top: 2em;
   gap: 20%;
   .board-grid {
     margin-left: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+    gap: 3em;
     .hero-item-board {
+      padding: 0 0 0.5em 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
       border-radius: 1em;
-      padding: 1em 0;
+      overflow: hidden;
+      img {
+        width: 100%;
+        aspect-ratio: 2/1;
+      }
       .name {
         text-align: center;
         font-size: 2rem;
       }
       .races {
+        display: flex;
         text-align: center;
       }
     }
   }
+}
+.hero-race-div {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+.hide {
+  display: none;
 }
 .board-btns {
   border: 5px solid purple;
@@ -104,20 +119,24 @@
     cursor: pointer;
   }
 }
+
 .synergies {
   background-color: rgba(122, 228, 255, 0.4);
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 1em;
   flex-wrap: wrap;
+  padding: 1em;
 }
 .synergy {
   display: flex;
   flex-direction: column;
+  gap: 0.2em;
   align-items: center;
+  justify-content: flex-end;
 }
 .stages {
   display: flex;
@@ -143,21 +162,53 @@
 .hide {
   display: none;
 }
+.hero-race-img {
+  transition: 200ms ease-in-out;
+}
 
-.hero-item-picker, 
-.hero-item-board {
+.hero-item-picker{
   cursor: pointer;
-  text-align: left;
   padding: 0.1em 1em;
 }
+.hero-item-board{
+  padding: 0.1em 1em;
+  .hero-item-board-icon{
+    cursor: pointer;
+  }
+}
+.highlighted {
+  outline: 1px solid black;
+}
+.hero-item-picker:has(.highlighted) {
+  opacity: 1;
+  background-color: #555;
+}
+.hero-item-picker.outOfPool {
+  opacity: 0.6;
+}
+.hero-item-picker.outOfPool:not(:has(.active)) {
+  opacity: 0.3;
+}
+.passive {
+  opacity: 0.4;
+  outline: 0;
+}
 .hero-item-picker {
+  opacity: 0.3;
   display: flex;
   justify-content: space-between;
   transition: 200ms ease-in-out;
 }
+
+
 .activeStage {
   font-size: larger;
   font-weight: bold;
+}
+.hero-title{
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
 }
 
 .hero-item-board {
@@ -165,12 +216,6 @@
   gap: 1em;
 }
 
-.picked {
-  background-color: rgb(0, 172, 0);
-}
-.outOfPool {
-  opacity: 0.2;
-}
 .hero-item-picker:hover,
 .hero-item-picker:focus-visible
 {
@@ -185,16 +230,34 @@
 }
 .one {
   background-color: rgb(204, 252, 252);
+  outline: 10px solid rgb(204, 252, 252);
 }
 .two {
-  background-color: rgb(70, 144, 253);
+   background-color: rgb(70, 144, 253);
+ outline: 10px solid rgb(70, 144, 253);
 }
 .three {
-  background-color: rgb(28, 5, 241);
+   background-color: rgb(28, 5, 241);
+ outline: 10px solid rgb(28, 5, 241);
 }
 .four {
-  background-color: rgb(177, 0, 221);
+   background-color: rgb(177, 0, 221);
+ outline: 10px solid rgb(177, 0, 221);
 }
 .five {
-  background-color: rgb(199, 221, 0);
+   background-color: rgb(199, 221, 0);
+ outline: 10px solid rgb(199, 221, 0);
+}
+.hero-races {
+  text-align: right;
+}
+.hero-item-picker.picked {
+  background-color: rgb(0, 172, 0);
+}
+.passiveRaceIcon {
+  opacity: 0.5;
+}
+.activeRaceIcon {
+  opacity: 1;
+  outline: 2px solid black;
 }
