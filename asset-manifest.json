@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DAC/static/css/main.c149ba38.css",
-    "main.js": "/DAC/static/js/main.84861d15.js",
+    "main.css": "/DAC/static/css/main.44a4b524.css",
+    "main.js": "/DAC/static/js/main.62eebf81.js",
     "static/media/druid.png": "/DAC/static/media/druid.248b23d3aa5bc1500a64.png",
     "static/media/assassin.png": "/DAC/static/media/assassin.21d2613b132bdeeb887f.png",
     "static/media/beast.png": "/DAC/static/media/beast.a16192b23404c833c3f3.png",
@@ -38,6 +38,7 @@
     "static/media/medusa.png": "/DAC/static/media/medusa.1cc15ead0cad27a66279.png",
     "static/media/elder_titan.png": "/DAC/static/media/elder_titan.146e0e81c33326bf7703.png",
     "static/media/jakiro.png": "/DAC/static/media/jakiro.2dec62ea28a1106a9177.png",
+    "static/media/drow_ranger.png": "/DAC/static/media/drow_ranger.c403d1d74057a8e1a567.png",
     "static/media/zeus.png": "/DAC/static/media/zeus.52c09626d774fea6e45a.png",
     "static/media/treant_protector.png": "/DAC/static/media/treant_protector.5990f6c2f6ceaefa176c.png",
     "static/media/bounty_hunter.png": "/DAC/static/media/bounty_hunter.1bdb11a1ace28b309d7a.png",
@@ -133,10 +134,10 @@
     "static/media/io.png": "/DAC/static/media/io.8f2f6153ca8ee89a82b5.png",
     "static/media/invoker.png": "/DAC/static/media/invoker.e7b68854387895fbb326.png",
     "static/media/abaddon.png": "/DAC/static/media/abaddon.f22c29baee37901c042a.png",
+    "static/media/ringmaster.png": "/DAC/static/media/ringmaster.aa3f92fd5463ae6a36c6.png",
     "static/media/kobold.png": "/DAC/static/media/kobold.6901fe8384c5cbc6da5d.png",
     "static/media/centaur.png": "/DAC/static/media/centaur.e9eaa3404f1c361c57fa.png",
     "static/media/tauren.png": "/DAC/static/media/tauren.b287214059a7f8f2ac6f.png",
-    "static/media/drow_ranger.png": "/DAC/static/media/drow_ranger.c28a28f816331a4d6503.png",
     "static/media/god.png": "/DAC/static/media/god.0e2d949c81ae3a602acc.png",
     "static/media/demon_hunter.png": "/DAC/static/media/demon_hunter.246b54600edd19fc5f74.png",
     "static/media/wizard.png": "/DAC/static/media/wizard.90d4365417ce747559d3.png",
@@ -144,11 +145,11 @@
     "static/media/monk.png": "/DAC/static/media/monk.2b2dd1c901075bd9337e.png",
     "static/media/aqir.png": "/DAC/static/media/aqir.334fd5590209377464e9.png",
     "index.html": "/DAC/index.html",
-    "main.c149ba38.css.map": "/DAC/static/css/main.c149ba38.css.map",
-    "main.84861d15.js.map": "/DAC/static/js/main.84861d15.js.map"
+    "main.44a4b524.css.map": "/DAC/static/css/main.44a4b524.css.map",
+    "main.62eebf81.js.map": "/DAC/static/js/main.62eebf81.js.map"
   },
   "entrypoints": [
-    "static/css/main.c149ba38.css",
-    "static/js/main.84861d15.js"
+    "static/css/main.44a4b524.css",
+    "static/js/main.62eebf81.js"
   ]
 }
