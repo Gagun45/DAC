@@ -18,11 +18,15 @@
   text-align: center;
 }
 .brick-grid {
-  width: 100px;
-  display: grid;
+  width: 0;
+  display: flex;
+  flex-direction: column-reverse;
   border: 1px solid black;
   opacity: 0.4;
   transition: 100ms ease-in-out;
+}
+.brick-grid:has(.brick){
+  width: 100%;
 }
 .brick {
   display: flex;
@@ -45,6 +49,57 @@
 .brick-active {
   background-color: green;
   opacity: 1;
+}
+.synergies {
+  background-color: rgba(122, 228, 255, 0.4);
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1em;
+  flex-wrap: wrap;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+}
+.synergies:has(.synergy) {
+  height: auto;
+  opacity: 1;
+  padding: 1em;
+  border: 1px solid black;
+}
+.synergy {
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  align-items: center;
+  justify-content: flex-end;
+  /* scale: 0; */
+  animation: scaleAnimation 1s forwards;
+}
+@keyframes scaleAnimation {
+  from {width: 0}
+  to {width: 100px}
+}
+
+.raceIcon {
+  width: 60%;
+  aspect-ratio: 3/2;
+}
+
+.stages {
+  display: flex;
+  align-items: center;
+  gap:0.1em;
+}
+.active {
+  font-weight: bold;
+}
+
+
+.synergy:has(.active) {
+  font-size: x-large;
 }
 
 .container {
@@ -107,6 +162,7 @@
   display: flex;
   justify-content: center;
   gap: 3em;
+  transition: all 5s;
 }
 .board-grid:has(.hero-item-board) {
   margin-bottom: 1em;
@@ -129,14 +185,9 @@
   min-width: 150px;
   max-width: 30%;
   padding: 1em;
-  opacity: 0;
-  animation: lol 1s forwards;
+  animation: scaleAnimation 1s forwards;
 }
 
-@keyframes lol {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
 
 .hero-item-board:has(.card) {
   min-width: 200px;
@@ -191,47 +242,7 @@
   background-color: rgb(160, 98, 16);
 }
 
-.synergies {
-  background-color: rgba(122, 228, 255, 0.4);
-  width: 100%;
-  height: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 1em;
-  flex-wrap: wrap;
-  opacity: 0;
-  transition: opacity 400ms ease-in-out;
-}
-.synergies:has(.synergy) {
-  height: auto;
-  opacity: 1;
-  padding: 1em;
-  border: 1px solid black;
-}
-.synergy {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2em;
-  align-items: center;
-  justify-content: flex-end;
-}
-.stages {
-  display: flex;
-  align-items: center;
-  gap:0.1em;
-}
-.active {
-  font-weight: bold;
-}
 
-.synergy:has(.active) {
-  font-size: x-large;
-}
-.brick-grid {
-  display: flex;
-  flex-direction: column-reverse;
-}
 .card {
   display: flex;
   align-items: center;

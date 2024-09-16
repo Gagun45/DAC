@@ -30,7 +30,7 @@ export default function Synergy({ countAS, synergy, wizards, demonHunters, demon
   return (
     <div className="synergy">
       <BrickGrid stages={race.stages} active={race.active}/>
-      <img className={race.active >= race.stages[0] ? 'activeRaceIcon' : 'passiveRaceIcon'} src={race.raceIcon} width={60} height={40}/>
+      <img className={race.active >= race.stages[0] ? 'activeRaceIcon raceIcon' : 'passiveRaceIcon raceIcon'} src={race.raceIcon}/>
     </div>
   )
 }
