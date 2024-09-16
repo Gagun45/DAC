@@ -45,21 +45,17 @@
 }
 
 .container {
-  min-width: 900px;
   min-height: 100vh;
   background-color: #777;
   display: flex;
   flex-direction: column;
-  /* background: url(./assets/dacbg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
 }
 .hero-picker{
   padding: 0 5em;
   color: white;
   display: flex;
   font-size: 1.1rem;
+  flex-wrap: wrap;
 }
 
 .board {
@@ -73,9 +69,10 @@
   align-items: flex-start;
   gap: 20%;
   .board-grid {
+    width: 40%;
+    flex-wrap: wrap;
     margin-left: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 3em;
     .hero-item-board {
       padding: 0 0 0.5em 0;
@@ -85,6 +82,8 @@
       justify-content: center;
       border-radius: 1em;
       overflow: hidden;
+      flex-wrap: wrap;
+      max-width: 50%;
       img {
         width: 100%;
         aspect-ratio: 2/1;
@@ -95,6 +94,7 @@
       }
       .races {
         display: flex;
+        gap: 0.1em;
         text-align: center;
       }
     }
