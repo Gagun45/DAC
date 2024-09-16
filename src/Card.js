@@ -14,11 +14,11 @@ export default function Card({isCardVisible, hero, pushRace }) {
         onClick={e => {
             e.stopPropagation()
         }} >
-            <select  value={cardRace} onChange={
+            <select className='selectCard' value={cardRace} onChange={
                 e => setCardRace(e.target.value)
             }
             >
-                {new_species.map((race, index) => (<option key={index} >{race.name}</option>))}
+                {new_species.map((race, index) => (<option key={index}>{race.name}</option>))}
             </select>
             <span className='plusButton' onClick={e => {
                 e.stopPropagation()

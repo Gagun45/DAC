@@ -19,6 +19,7 @@ import lich from './icons/lich.png'
 import necrophos from './icons/necrophos.png'
 import spectre from './icons/spectre.png'
 import io from './icons/io.png'
+import ringmaster from './icons/ringmaster.png'
 
 export const fives = [
     {
@@ -122,6 +123,12 @@ export const fives = [
         cost: 'five',
         races: ['Kobold', 'Shaman'],
         icon: arc_warden
+    },
+    {
+        name: "Ringmaster",
+        cost: 'five',
+        races: [],
+        icon: ringmaster
     },
     {
         name: "Lich",
