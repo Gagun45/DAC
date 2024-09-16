@@ -68,37 +68,44 @@
   display: flex;
   align-items: flex-start;
   gap: 20%;
-  .board-grid {
-    width: 40%;
-    flex-wrap: wrap;
-    margin-left: auto;
-    display: flex;
-    gap: 3em;
-    .hero-item-board {
-      padding: 0 0 0.5em 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: 1em;
-      overflow: hidden;
-      flex-wrap: wrap;
-      max-width: 50%;
-      img {
-        width: 100%;
-        aspect-ratio: 2/1;
-      }
-      .name {
-        text-align: center;
-        font-size: 2rem;
-      }
-      .races {
-        display: flex;
-        gap: 0.1em;
-        text-align: center;
-      }
-    }
-  }
+}
+.board-grid {
+  width: 40%;
+  flex-wrap: wrap;
+  margin-left: auto;
+  display: flex;
+  gap: 3em; 
+}
+.hero-item-board-icon {
+  width: 100%;
+  aspect-ratio: 2/1;
+  cursor: pointer;
+}
+.hero-item-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+  overflow: hidden;
+  flex-wrap: wrap;
+  max-width: 50%;
+  padding-bottom: 0.5em;
+}
+.hero-item-board-race {
+  width: 50px;
+  aspect-ratio: 3/2;
+  outline: 1px solid black;
+}
+
+.name {
+  text-align: center;
+  font-size: 2rem;
+}
+.races {
+  display: flex;
+  gap: 0.5em;
+  text-align: center;
 }
 .hero-race-div {
   display: flex;
@@ -157,7 +164,15 @@
   flex-direction: column-reverse;
 }
 .card {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+}
+.plusButton{
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 .hide {
   display: none;
@@ -170,12 +185,7 @@
   cursor: pointer;
   padding: 0.1em 1em;
 }
-.hero-item-board{
-  padding: 0.1em 1em;
-  .hero-item-board-icon{
-    cursor: pointer;
-  }
-}
+
 .highlighted {
   outline: 1px solid black;
 }

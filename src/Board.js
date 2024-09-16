@@ -19,7 +19,7 @@ export default function Board({ clearBoard, isCardVisible, toggleCard, boardHero
               >{hero.icon ? (<img className='hero-item-board-icon' onClick={() => deleteHero(hero)} src={hero.icon} />) : <span className='name'>{hero.name}</span>}
                 <div className='races'>
                   {hero.races.map(r => {
-                    return (<img src={SPECIES.find(item => item.name == r).raceIcon} width={40} height={20} />)
+                    return (<img className='hero-item-board-race' src={SPECIES.find(item => item.name == r).raceIcon} />)
                   })}
                 </div>
                 <Card isCardVisible={isCardVisible} pushRace={pushRace} hero={hero} />

@@ -20,7 +20,7 @@ export default function Card({isCardVisible, hero, pushRace }) {
             >
                 {new_species.map((race, index) => (<option key={index} >{race.name}</option>))}
             </select>
-            <span onClick={e => {
+            <span className='plusButton' onClick={e => {
                 e.stopPropagation()
                 pushRace(hero, cardRace)
             }}>+</span>
