@@ -9,10 +9,13 @@
   --columns: 2;
 }
 .header {
-  font-size: 2rem;
+  padding: 2rem;
+  font-size: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid black;
+  text-align: center;
 }
 .brick-grid {
   width: 100px;
@@ -45,40 +48,71 @@
 }
 
 .container {
+  min-width: 300px;
   min-height: 100vh;
   background-color: #777;
   display: flex;
   flex-direction: column;
 }
 .hero-picker{
-  width: 90%;
+  padding: 1em 0;
+  max-width: 90%;
   margin: 0 auto;
   color: white;
   display: flex;
   font-size: 1.1rem;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2em;
+  border-collapse: collapse;
+}
+
+.flex-column {
+  flex: 1;
+  max-width: max-content;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.grid-caption {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  padding: 0.25em 0;
+  margin-bottom: 0.5em;
 }
 
 .board {
-  padding: 2em;
+  min-width: 250px;
   width: 100%;
-  border: 5px solid green;
   background-color: rgba(255,255,255, 0.4);
   height: auto;
   flex-grow: 1;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 20%;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.board:has(.hero-item-board) {
+  opacity: 1;
+  padding: 2em;
 }
 .board-grid {
-  width: 40%;
+  min-width: 150px;
+  width: 80%;
   flex-wrap: wrap;
-  margin-left: auto;
   display: flex;
-  gap: 3em; 
+  justify-content: center;
+  gap: 3em;
+}
+.board-grid:has(.hero-item-board) {
+  margin-bottom: 1em;
 }
 .hero-item-board-icon {
+  min-width: 40px;
   width: 100%;
   aspect-ratio: 2/1;
   cursor: pointer;
@@ -92,8 +126,20 @@
   overflow: hidden;
   flex-wrap: wrap;
   gap: 1em;
+  min-width: 150px;
   max-width: 30%;
-  padding-bottom: 0;
+  padding: 1em;
+  opacity: 0;
+  animation: lol 1s forwards;
+}
+
+@keyframes lol {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.hero-item-board:has(.card) {
+  min-width: 200px;
 }
 .hero-item-board-race {
   width: 50px;
@@ -105,6 +151,8 @@
   gap: 0.5em;
   flex-wrap: wrap;
   justify-content: center;
+  min-width: 100px;
+  width: 100%;
 }
 
 .name {
@@ -120,28 +168,46 @@
 .hide {
   display: none;
 }
-.board-btns {
-  border: 5px solid purple;
+.board-btns-div {
   display: flex;
-  font-size: 1.5rem;
-  button {
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-    outline: none;
-    cursor: pointer;
-  }
+  align-items: center;
+  font-size: 1em;
+  gap: 1em;
+}
+.board-capacity-span {
+  min-width: max-content;
+}
+.board-btn {
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.card-btn:hover {
+  background-color: rgb(130, 130, 255);
+}
+.clear-btn:hover {
+  background-color: rgb(160, 98, 16);
 }
 
 .synergies {
   background-color: rgba(122, 228, 255, 0.4);
   width: 100%;
-  height: auto;
+  height: 0;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   gap: 1em;
   flex-wrap: wrap;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+}
+.synergies:has(.synergy) {
+  height: auto;
+  opacity: 1;
   padding: 1em;
+  border: 1px solid black;
 }
 .synergy {
   display: flex;
@@ -158,9 +224,7 @@
 .active {
   font-weight: bold;
 }
-.flex-column {
-  flex: 1;
-}
+
 .synergy:has(.active) {
   font-size: x-large;
 }
@@ -205,6 +269,8 @@
 .hero-item-picker{
   cursor: pointer;
   padding: 0.1em 1em;
+  display: flex;
+  gap: 1em;
 }
 
 .highlighted {
@@ -265,30 +331,26 @@
   gap: 0.2em;
 }
 
-.grid-caption {
-  text-align: center;
-  border: 1px solid black;
-  font-size: 2em;
-}
+
 .one {
   background-color: rgb(204, 252, 252);
-  outline: 10px solid rgb(204, 252, 252);
+  /* outline: 10px solid rgb(204, 252, 252); */
 }
 .two {
    background-color: rgb(70, 144, 253);
- outline: 10px solid rgb(70, 144, 253);
+ /* outline: 10px solid rgb(70, 144, 253); */
 }
 .three {
    background-color: rgb(28, 5, 241);
- outline: 10px solid rgb(28, 5, 241);
+ /* outline: 10px solid rgb(28, 5, 241); */
 }
 .four {
    background-color: rgb(177, 0, 221);
- outline: 10px solid rgb(177, 0, 221);
+ /* outline: 10px solid rgb(177, 0, 221); */
 }
 .five {
    background-color: rgb(199, 221, 0);
- outline: 10px solid rgb(199, 221, 0);
+ /* outline: 10px solid rgb(199, 221, 0); */
 }
 .hero-races {
   text-align: right;

@@ -6,7 +6,7 @@ export default function HeroPicker({heroes, pickHero, boardHeroes, highlightRace
     <div className='hero-picker'>
         {
           <div className='flex-column ones'>
-            <div className='grid-caption'>1 cost</div>
+            <div className='grid-caption one'>1 cost</div>
             {heroes.filter(hero=>hero.cost=='one').map((hero, index)=>(
             <Hero key={index} highlightRace={highlightRace} highlightedSpecies={highlightedSpecies} hero={hero} pickHero={pickHero} boardHeroes={boardHeroes}/>
           ))}
@@ -14,7 +14,7 @@ export default function HeroPicker({heroes, pickHero, boardHeroes, highlightRace
         }
         {
           <div className='flex-column twos'>
-            <div className='grid-caption'>2 cost</div>
+            <div className='grid-caption two'>2 cost</div>
           {heroes.filter(hero=>hero.cost=='two').map((hero, index)=>(
             <Hero key={index} highlightRace={highlightRace} highlightedSpecies={highlightedSpecies} hero={hero} pickHero={pickHero} boardHeroes={boardHeroes}/>
           ))}
@@ -22,7 +22,7 @@ export default function HeroPicker({heroes, pickHero, boardHeroes, highlightRace
         }
         {
           <div className='flex-column threes'>
-            <div className='grid-caption'>3 cost</div>
+            <div className='grid-caption three'>3 cost</div>
           {heroes.filter(hero=>hero.cost=='three').map((hero, index)=>(
             <Hero key={index} highlightRace={highlightRace} highlightedSpecies={highlightedSpecies} hero={hero} pickHero={pickHero} boardHeroes={boardHeroes}/>
           ))}
@@ -30,7 +30,7 @@ export default function HeroPicker({heroes, pickHero, boardHeroes, highlightRace
         }
         {
           <div className='flex-column fours'>
-            <div className='grid-caption'>4 cost</div>
+            <div className='grid-caption four'>4 cost</div>
          { heroes.filter(hero=>hero.cost=='four').map((hero, index)=>(
             <Hero key={index} highlightRace={highlightRace} highlightedSpecies={highlightedSpecies} hero={hero} pickHero={pickHero} boardHeroes={boardHeroes}/>
           ))}
@@ -38,7 +38,7 @@ export default function HeroPicker({heroes, pickHero, boardHeroes, highlightRace
         }
         {
           <div className='flex-column fives'>
-            <div className='grid-caption'>5 cost</div>
+            <div className='grid-caption five'>5 cost</div>
           {heroes.filter(hero=>hero.cost=='five').map((hero, index)=>(
             <Hero key={index} highlightRace={highlightRace} highlightedSpecies={highlightedSpecies} hero={hero} pickHero={pickHero} boardHeroes={boardHeroes}/>
           ))}

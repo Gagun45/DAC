@@ -28,10 +28,10 @@ export default function Board({ clearBoard, isCardVisible, toggleCard, boardHero
           )
         })}
       </div>
-      <div className={`board-btns ${boardHeroes.length||'hide'}`}>
-        <span>{boardHeroes.length&&`[${boardHeroes.length} / ${MAX_BOARD_CAPACITY}]`}</span>
-        <button onClick={toggleCard}>{isCardVisible ? "Hide Card" : "Show Card"}</button>
-        <button onClick={clearBoard}>Clear Board</button>
+      <div className={`board-btns-div ${boardHeroes.length||'hide'}`}>
+        <button className='board-btn card-btn' onClick={toggleCard}>{isCardVisible ? "Hide Card" : "Show Card"}</button>
+        <span className='board-capacity-span'>{boardHeroes.length&&`[${boardHeroes.length} / ${MAX_BOARD_CAPACITY}]`}</span>
+        <button className='board-btn clear-btn' onClick={clearBoard}>Clear Board</button>
       </div>
     </div>
   )
