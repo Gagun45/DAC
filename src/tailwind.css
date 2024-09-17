@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-title {
+    @apply flex items-center gap-[0.2em];
+}
+.brick {
+    @apply flex justify-center items-center text-[10px] font-bold h-[20px] bg-[#777] opacity-100 border border-orange-400;
+}
+.board-btn {
+    @apply py-[0.5em] px-[1em] outline-none border-none cursor-pointer rounded-3xl bg-slate-400;
+}
+.grid-caption {
+    @apply text-center text-[2em] text-black px-0 py-[0.25em] mb-[0.5em]
+}
+.one{
+    @apply bg-[rgb(204,252,252)]
+}
+.two{
+    @apply bg-[rgb(70,144,253)]
+}
+.three{
+    @apply bg-[rgb(28,5,241)]
+}
+.four{
+    @apply bg-[rgb(177,0,221)]
+}
+.five{
+    @apply bg-[rgb(199,221,0)]
+}

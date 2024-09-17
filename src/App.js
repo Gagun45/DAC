@@ -1,6 +1,7 @@
 import HeroPicker from './HeroPicker';
 import Board from './Board';
 import Synergies from './Synergies';
+import './tailwind.css'
 import './App.css';
 import { useState, useEffect } from 'react';
 import { HEROES } from './assets/heroes/Heroes';
@@ -106,7 +107,7 @@ function App() {
   }
 
   return (
-    <div className='container'>
+    <div className='min-w-[300px] min-h-[100vh] bg-[#777] flex flex-col'>
       <NavBar />
       <HeroPicker highlightedSpecies={highlightedSpecies} highlightRace={highlightRace} heroes={HEROES} pickHero={pickHero} boardHeroes={boardHeroes} />
       <Synergies activeSynergies={finalActiveSynergies} demonHunters={demonHunters} demons={demons} wizards={wizards} countAS={countAS} />

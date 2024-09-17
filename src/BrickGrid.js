@@ -8,7 +8,8 @@ export default function BrickGrid({stages, active}) {
 
 
   return (
-    <div className='brick-grid'>
+    <div className='w-0 flex flex-col-reverse border-[1px] border-black opacity-[0.4] transition-[100ms] ease-in-out has-[.brick]:w-full
+    has-[.brick-stage.brick-active]:opacity-100'>
         {newArray(maxStage).map((item, index)=>{
             return <Brick key={index} active={active} index={index} stages={stages} />
         })}

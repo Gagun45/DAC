@@ -4,11 +4,27 @@
   padding: 0;
   user-select: none;
 }
-:root{
-  --rows: 3;
-  --columns: 2;
+.brick-stage.brick-active{
+  font-size: 16px;
 }
-.header {
+.brick-active {
+  background-color: green;
+  opacity: 1;
+}
+.active {
+  font-weight: bold;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+}
+.activeStage {
+  font-size: larger;
+  font-weight: bold;
+}
+/* .header {
   padding: 2rem;
   font-size: 4rem;
   display: flex;
@@ -16,8 +32,8 @@
   align-items: center;
   border-bottom: 2px solid black;
   text-align: center;
-}
-.brick-grid {
+} */
+/* .brick-grid {
   width: 0;
   display: flex;
   flex-direction: column-reverse;
@@ -27,8 +43,8 @@
 }
 .brick-grid:has(.brick){
   width: 100%;
-}
-.brick {
+} */
+/* .brick {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,19 +54,12 @@
   background-color: #777;
   opacity: 1;
   border: 1px solid orange;
-}
-.brick-grid:has(.brick-stage.brick-active) {
+} */
+/* .brick-grid:has(.brick-stage.brick-active) {
   opacity: 1;
-}
+} */
 
-.brick-stage.brick-active{
-  font-size: 16px;
-}
-.brick-active {
-  background-color: green;
-  opacity: 1;
-}
-.synergies {
+/* .synergies {
   background-color: rgba(122, 228, 255, 0.4);
   width: 100%;
   height: 0;
@@ -61,55 +70,46 @@
   flex-wrap: wrap;
   opacity: 0;
   transition: opacity 400ms ease-in-out;
-}
-.synergies:has(.synergy) {
+} */
+/* .synergies:has(.synergy) {
   height: auto;
   opacity: 1;
   padding: 1em;
   border: 1px solid black;
-}
-.synergy {
+} */
+/* .synergy {
   width: 0;
   display: flex;
   flex-direction: column;
   gap: 0.2em;
   align-items: center;
   justify-content: flex-end;
-  /* scale: 0; */
   animation: scaleAnimation 1s forwards;
 }
 @keyframes scaleAnimation {
   from {width: 0}
   to {width: 100px}
-}
+} */
 
-.raceIcon {
+/* .raceIcon {
   width: 60%;
   aspect-ratio: 3/2;
-}
-
-.stages {
-  display: flex;
-  align-items: center;
-  gap:0.1em;
-}
-.active {
-  font-weight: bold;
-}
+} */
 
 
-.synergy:has(.active) {
+
+/* .synergy:has(.active) {
   font-size: x-large;
-}
+} */
 
-.container {
+/* .custom-container {
   min-width: 300px;
   min-height: 100vh;
   background-color: #777;
   display: flex;
   flex-direction: column;
-}
-.hero-picker{
+} */
+/* .hero-picker{
   padding: 1em 0;
   max-width: 90%;
   margin: 0 auto;
@@ -120,23 +120,24 @@
   justify-content: center;
   gap: 2em;
   border-collapse: collapse;
-}
+} */
 
-.flex-column {
+/* .flex-column {
   flex: 1;
   max-width: max-content;
   border: 1px solid black;
   border-collapse: collapse;
-}
-.grid-caption {
+} */
+ 
+/* .grid-caption {
   text-align: center;
   font-size: 2em;
   color: black;
   padding: 0.25em 0;
   margin-bottom: 0.5em;
-}
+} */
 
-.board {
+/* .board {
   min-width: 250px;
   width: 100%;
   background-color: rgba(255,255,255, 0.4);
@@ -154,26 +155,25 @@
 .board:has(.hero-item-board) {
   opacity: 1;
   padding: 2em;
-}
-.board-grid {
+} */
+/* .board-grid {
   min-width: 150px;
   width: 80%;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
   gap: 3em;
-  transition: all 5s;
 }
 .board-grid:has(.hero-item-board) {
   margin-bottom: 1em;
-}
-.hero-item-board-icon {
+} */
+/* .hero-item-board-icon {
   min-width: 40px;
   width: 100%;
   aspect-ratio: 2/1;
   cursor: pointer;
-}
-.hero-item-board {
+} */
+/* .hero-item-board {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,70 +186,56 @@
   max-width: 30%;
   padding: 1em;
   animation: scaleAnimation 1s forwards;
-}
+} */
 
 
-.hero-item-board:has(.card) {
+/* .hero-item-board:has(.card) {
   min-width: 200px;
-}
-.hero-item-board-race {
+} */
+/* .hero-item-board-race {
   width: 50px;
   aspect-ratio: 3/2;
   outline: 1px solid black;
-}
-.races {
+} */
+/* .races {
   display: flex;
   gap: 0.5em;
   flex-wrap: wrap;
   justify-content: center;
   min-width: 100px;
   width: 100%;
-}
+} */
 
-.name {
-  text-align: center;
-  font-size: 2rem;
-}
 
-.hero-race-div {
-  display: flex;
-  align-items: center;
-  gap: 0.2em;
-}
-.hide {
+
+/* .hide {
   display: none;
-}
-.board-btns-div {
+} */
+/* .board-btns-div {
   display: flex;
   align-items: center;
-  font-size: 1em;
   gap: 1em;
-}
-.board-capacity-span {
+} */
+/* .board-capacity-span {
   min-width: max-content;
-}
-.board-btn {
+} */
+/* .board-btn {
   padding: 0.5em 1em;
   border-radius: 0.5em;
   outline: none;
   border: none;
   cursor: pointer;
-}
-.card-btn:hover {
+} */
+/* .card-btn:hover {
   background-color: rgb(130, 130, 255);
 }
 .clear-btn:hover {
   background-color: rgb(160, 98, 16);
-}
+} */
 
 
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4em;
-}
-.plusButton{
+
+/* .plusButton{
   width: 1.75rem;
   aspect-ratio: 1/1;
   font-size: 1.5rem;
@@ -263,10 +249,10 @@
 }
 .plusButton:hover{
   background-color: rgb(0, 187, 0);
-}
-.hide {
+} */
+/* .hide {
   display: none;
-}
+} */
 .hero-race-img {
   transition: 200ms ease-in-out;
   scale: 1;
@@ -332,51 +318,41 @@
 }
 
 
-.activeStage {
-  font-size: larger;
-  font-weight: bold;
-}
-.hero-title{
-  display: flex;
-  align-items: center;
-  gap: 0.2em;
-}
 
-
-.one {
+/* .one {
   background-color: rgb(204, 252, 252);
-  /* outline: 10px solid rgb(204, 252, 252); */
+  outline: 10px solid rgb(204, 252, 252);
 }
 .two {
    background-color: rgb(70, 144, 253);
- /* outline: 10px solid rgb(70, 144, 253); */
+ outline: 10px solid rgb(70, 144, 253);
 }
 .three {
    background-color: rgb(28, 5, 241);
- /* outline: 10px solid rgb(28, 5, 241); */
+ outline: 10px solid rgb(28, 5, 241);
 }
 .four {
    background-color: rgb(177, 0, 221);
- /* outline: 10px solid rgb(177, 0, 221); */
+ outline: 10px solid rgb(177, 0, 221);
 }
 .five {
    background-color: rgb(199, 221, 0);
- /* outline: 10px solid rgb(199, 221, 0); */
-}
-.hero-races {
+ outline: 10px solid rgb(199, 221, 0);
+} */
+/* .hero-races {
   text-align: right;
-}
+} */
 
-.passiveRaceIcon {
+/* .passiveRaceIcon {
   opacity: 0.5;
 }
 .activeRaceIcon {
   opacity: 1;
   outline: 2px solid black;
-}
-.selectCard {
+} */
+/* .selectCard {
   outline: none;
   border: none;
   padding: 0.3em 0.5em;
   border-radius: 1em;
-}
+} */

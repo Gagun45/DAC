@@ -14,7 +14,7 @@ export default function Hero({ hero, pickHero, boardHeroes, highlightRace, highl
         {hero.icon&&(<img key={hero.name} src={hero.icon} width={60} height={40}/>)}
         <span>{hero.name}</span>
       </div>
-      <div className='hero-race-div'>
+      <div className='hero-title'>
       {hero.races.map(r=>{
         let matchedRace = highlightedSpecies.find(item=> item.name==r)
         let imgClassTag = `hero-race-img ${matchedRace.highlighted ? 'highlighted' : 'passive'}`
