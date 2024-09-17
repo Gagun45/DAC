@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DAC/static/css/main.f800e207.css",
-    "main.js": "/DAC/static/js/main.a74667c1.js",
+    "main.css": "/DAC/static/css/main.c2f60a0a.css",
+    "main.js": "/DAC/static/js/main.138e57c2.js",
     "static/media/druid.png": "/DAC/static/media/druid.248b23d3aa5bc1500a64.png",
     "static/media/assassin.png": "/DAC/static/media/assassin.21d2613b132bdeeb887f.png",
     "static/media/beast.png": "/DAC/static/media/beast.a16192b23404c833c3f3.png",
@@ -145,11 +145,11 @@
     "static/media/monk.png": "/DAC/static/media/monk.2b2dd1c901075bd9337e.png",
     "static/media/aqir.png": "/DAC/static/media/aqir.334fd5590209377464e9.png",
     "index.html": "/DAC/index.html",
-    "main.f800e207.css.map": "/DAC/static/css/main.f800e207.css.map",
-    "main.a74667c1.js.map": "/DAC/static/js/main.a74667c1.js.map"
+    "main.c2f60a0a.css.map": "/DAC/static/css/main.c2f60a0a.css.map",
+    "main.138e57c2.js.map": "/DAC/static/js/main.138e57c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.f800e207.css",
-    "static/js/main.a74667c1.js"
+    "static/css/main.c2f60a0a.css",
+    "static/js/main.138e57c2.js"
   ]
 }
