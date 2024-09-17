@@ -3,7 +3,7 @@ import Hero from './Hero'
 
 export default function HeroPicker({heroes, pickHero, boardHeroes, highlightRace, highlightedSpecies}) {
   return (
-    <div className='py-[1em] px-0 max-w-[90%] my-0 mx-auto text-white flex text-[1.1rem] flex-wrap justify-center gap-[2em] border-collapse'>
+    <div className='py-[1em] px-0 max-w-[95%] my-0 mx-auto text-white flex text-[1.1rem] flex-wrap justify-center gap-[2em] border-collapse'>
         {
           <div className='border border-black'>
             <div className='grid-caption one'>1 cost</div>
