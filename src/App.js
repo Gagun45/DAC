@@ -1,12 +1,12 @@
-import HeroPicker from './HeroPicker';
-import Board from './Board';
-import Synergies from './Synergies';
+import HeroPicker from './components/HeroPicker/HeroPicker';
+import Board from './components/Board/Board';
+import Synergies from './components/Synergies/Synergies';
 import './tailwind.css'
 import './App.css';
 import { useState, useEffect } from 'react';
 import { HEROES } from './assets/heroes/Heroes';
 import { SPECIES } from './assets/Races';
-import NavBar from './NavBar';
+import NavBar from './components/NavBar/NavBar';
 
 export const MAX_BOARD_CAPACITY = 12
 
@@ -107,12 +107,17 @@ function App() {
   }
 
   return (
-    <div className='min-w-[300px] min-h-[100vh] bg-[#777] flex flex-col'>
+    <>
+    <div className='sm:hidden'>TOO SMALL SCREEN</div>
+    <div className='dac-container'>
       <NavBar />
-      <HeroPicker highlightedSpecies={highlightedSpecies} highlightRace={highlightRace} heroes={HEROES} pickHero={pickHero} boardHeroes={boardHeroes} />
-      <Synergies activeSynergies={finalActiveSynergies} demonHunters={demonHunters} demons={demons} wizards={wizards} countAS={countAS} />
-      <Board clearBoard={clearBoard} toggleCard={toggleCard} isCardVisible={isCardVisible} boardHeroes={boardHeroes} deleteHero={deleteHero} pushRace={pushRace} />
+      <div className='relative w-full items-center flex flex-col flex-grow'>
+        <HeroPicker highlightedSpecies={highlightedSpecies} highlightRace={highlightRace} heroes={HEROES} pickHero={pickHero} boardHeroes={boardHeroes} />
+        <Board clearBoard={clearBoard} toggleCard={toggleCard} isCardVisible={isCardVisible} boardHeroes={boardHeroes} deleteHero={deleteHero} pushRace={pushRace} />
+        <Synergies activeSynergies={finalActiveSynergies} demonHunters={demonHunters} demons={demons} wizards={wizards} countAS={countAS} />
+      </div>
     </div>
+    </>
   );
 }
 

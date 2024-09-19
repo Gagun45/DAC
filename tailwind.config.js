@@ -1,21 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/*.js"],
+  content: ["./src/*.js", "./src/components/**/*.js"],
   theme: {
     extend: {
       keyframes: {
-        scaleAnimation100: {
+        width10percent: {
         from: {width: '0'},
-        to: {width: '100px'}
+        to: {width: '8%'}
         },
-        scaleAnimation50: {
-          from: {width: '0'},
-          to: {width: '50px'}
+        scale0to1: {
+          from: {scale: '0'},
+          to: {scale: '1'}
+          },
+        opacity0to1: {
+          from: {opacity: '0'},
+          to: {opacity: '1'}
           }
       },
       animation: {
-        scaleAnimation100 : 'scaleAnimation100 1s ease-in-out forwards',
-        scaleAnimation50 : 'scaleAnimation50 1s ease-in-out forwards'
+        width10percent : 'width10percent 500ms ease-in-out forwards',
+        opacity0to1 : 'opacity0to1 500ms ease-in-out forwards'
       }
     },
   },

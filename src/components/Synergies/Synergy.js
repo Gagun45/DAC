@@ -28,7 +28,7 @@ export default function Synergy({ countAS, synergy, wizards, demonHunters, demon
   }
 
   return (
-    <div className="synergy w-0 flex flex-col gap-[0.2em] items-center justify-end animate-scaleAnimation100 has-[.active]:text-[x-large]">
+    <div className="synergy w-0 flex flex-col gap-[0.2em] items-center justify-end animate-width10percent max-w-[100px]">
       <BrickGrid stages={race.stages} active={race.active}/>
       <img className={`w-3/5 aspect-[3/2] ${race.active >= race.stages[0] ? 'opacity-100 outline-2 outline-black' : 'opacity-50'}` }src={race.raceIcon}/>
     </div>
