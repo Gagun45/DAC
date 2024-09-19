@@ -22,7 +22,7 @@ module.exports = {
         opacity0to1: 'opacity0to1 500ms ease-in-out forwards'
       },
       screens: {
-        'sm' : '512px'
+        'sm' : '392px'
       }
     },
   },
